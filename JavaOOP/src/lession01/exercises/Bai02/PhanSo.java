@@ -1,5 +1,7 @@
 package lession01.exercises.Bai02;
 
+import lession02_contructor_static.exercises.Bai01PhanSo;
+
 import java.util.Scanner;
 
 public class PhanSo {
@@ -77,8 +79,14 @@ public class PhanSo {
     }
 
     public void rutGon(PhanSo ps) {
-        int uCLN = gcd(ps.tuSo, ps.mauSo);
-        ps.tuSo /= uCLN;
-        ps.mauSo /= uCLN;
+        int ucln = gcd(Math.abs(ps.tuSo), Math.abs(ps.mauSo));
+
+        ps.tuSo /= ucln;
+        ps.mauSo /= ucln;
+
+        if (ps.mauSo < 0) {
+            ps.tuSo = -ps.tuSo;
+            ps.mauSo = -ps.mauSo;
+        }
     }
 }

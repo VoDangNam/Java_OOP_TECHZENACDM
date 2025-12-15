@@ -5,14 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1511e64a-c973-4f3f-ab44-0d807449eb0f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/exercises/Bai01/StudentBai01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/exercises/Bai01/StudentManageBai01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/exercises/Bai02/PhanSo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/exercises/Bai02/PhanSoMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/exercises/Bai03/Point.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/exercises/Bai03/PointMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/practice/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/practice/StudentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/Bai01PhanSo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/PhanSoManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/practice/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/practice/AnimalManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaOOP/src/lession01/practice/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaOOP/src/lession01/practice/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/JavaOOP/lession01/exercises/Bai02/PhanSoMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/JavaOOP/lession01/exercises/Bai02/PhanSoMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
