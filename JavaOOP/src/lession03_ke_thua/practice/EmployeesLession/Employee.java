@@ -1,12 +1,28 @@
-package lession03_ke_thua.practice;
+package lession03_ke_thua.practice.EmployeesLession;
 
 import java.util.Scanner;
 
 public class Employee {
-    String id;
-    String name;
-    String date;
-    String address;
+    private String id;
+    private String name;
+    private String date;
+    private String address;
+
+    public void updateEmployee(Scanner sc) {
+        String newName;
+        String newDate;
+        String newAddess;
+        System.out.print("Nhap vao ten moi: ");
+        newName = sc.nextLine();
+        System.out.print("Nhap vao ngay thang nam sinh moi: ");
+        newDate = sc.nextLine();
+        System.out.print("Nhap vao dia chi moi: ");
+        newAddess = sc.nextLine();
+        this.name = newName;
+        this.date = newDate;
+        this.address = newAddess;
+    }
+
 
     public Employee() {
     }
@@ -50,7 +66,8 @@ public class Employee {
         this.address = address;
     }
 
-    public void input(Scanner sc){
+
+    public void input(Scanner sc) {
         System.out.print("Enter name:");
         name = sc.nextLine();
         System.out.print("Enter date of birth:");
@@ -59,7 +76,7 @@ public class Employee {
         address = sc.nextLine();
     }
 
-    public void output(){
+    public void output() {
         System.out.println("===== Employee Information =====");
         System.out.println("Id: " + id);
         System.out.println("Name: " + name);

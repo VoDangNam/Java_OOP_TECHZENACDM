@@ -6,6 +6,7 @@ public class StudentMain {
         Student s2 = new Student();
 
         Student s3 = new Student();
+        Student s4 = new Student();
 
         s.setName("   ");
         s.setScore(11);
@@ -19,5 +20,9 @@ public class StudentMain {
         s3.setName("Nam");
         s3.setScore(10);
         s3.ouputStd();
+
+        s4.setName("Nam4");
+        s4.setScore(10);
+        s4.ouputStd();
     }
 }

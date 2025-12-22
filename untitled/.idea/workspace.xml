@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1511e64a-c973-4f3f-ab44-0d807449eb0f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/Bai01PhanSo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/Bai01PhanSo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/PhanSoManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/PhanSoManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/JavaOOP/lession01/exercises/Bai02/PhanSo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/JavaOOP/lession01/exercises/Bai02/PhanSo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/JavaOOP/lession02_contructor_static/exercises/Bai01PhanSo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/JavaOOP/lession02_contructor_static/exercises/Bai01PhanSo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../out/production/JavaOOP/lession02_contructor_static/exercises/PhanSoManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/JavaOOP/lession02_contructor_static/exercises/PhanSoManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession03_ke_thua/practice/Baihoc03.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession03_ke_thua/practice/EmployeesLession/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession03_ke_thua/practice/EmployeesLession/EmployeeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession03_ke_thua/practice/EmployeesLession/ManagementEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaOOP/src/lession03_ke_thua/practice/EmployeesLession/ProductionEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/Bai03/StudentMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaOOP/src/lession02_contructor_static/exercises/Bai03/StudentMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/JavaOOP/lession02_contructor_static/exercises/Bai03/StudentMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/JavaOOP/lession02_contructor_static/exercises/Bai03/StudentMain.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,16 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Java_backen_Techzen/Java_OOP_TECHZENACDM/untitled/src/Main.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java_backen_Techzen/Java_OOP_TECHZENACDM/untitled",
+    "onboarding.tips.debug.path": "D:/Java_backen_Techzen/Java_OOP_TECHZENACDM/untitled/src/Main.java"
   }
-}</component>
+}]]></component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="1511e64a-c973-4f3f-ab44-0d807449eb0f" name="Changes" comment="" />
