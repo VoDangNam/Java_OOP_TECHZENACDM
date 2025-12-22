@@ -1,7 +1,5 @@
 package lession01.exercises.Bai02;
 
-import lession02_contructor_static.exercises.Bai01PhanSo;
-
 import java.util.Scanner;
 
 public class PhanSo {
