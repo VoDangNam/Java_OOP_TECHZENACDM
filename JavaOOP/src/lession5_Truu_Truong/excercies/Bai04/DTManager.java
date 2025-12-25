@@ -1,7 +1,6 @@
-package lession04_DaHinh.excercies.Bai04;
+package lession5_Truu_Truong.excercies.Bai04;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class DTManager {
@@ -12,86 +11,71 @@ public class DTManager {
     static ArrayList<NewPhone> newPhones = new ArrayList<>();
     static ArrayList<Phone> phone = new ArrayList<>();
 
-    static {
-
-        // ===== OLD PHONE =====
-        OldPhone op1 = new OldPhone(
-                "OP001",
-                "iPhone 11",
-                6000000.0,
-                3,
-                "Apple",
-                80,
-                "Máy cũ, pin 85%"
-        );
-
-        OldPhone op2 = new OldPhone(
-                "OP002",
-                "iPhone 12",
-                8500000.0,
-                6,
-                "Apple",
-                90,
-                "Ngoại hình đẹp, full box"
-        );
-
-        OldPhone op3 = new OldPhone(
-                "OP003",
-                "Samsung S20",
-                5500000.0,
-                3,
-                "Samsung",
-                70,
-                "Màn hình xước nhẹ"
-        );
-
-        // ===== NEW PHONE =====
-        NewPhone np1 = new NewPhone(
-                "NP001",
-                "iPhone 15",
-                22000000.0,
-                12,
-                "Apple",
-                20
-        );
-
-        NewPhone np2 = new NewPhone(
-                "NP002",
-                "Samsung S23",
-                18000000.0,
-                12,
-                "Samsung",
-                15
-        );
-
-        NewPhone np3 = new NewPhone(
-                "NP003",
-                "Xiaomi 13",
-                14000000.0,
-                12,
-                "Xiaomi",
-                25
-        );
-
-        // ===== ADD TO LIST =====
-        oldPhones.add(op1);
-        oldPhones.add(op2);
-        oldPhones.add(op3);
-
-        newPhones.add(np1);
-        newPhones.add(np2);
-        newPhones.add(np3);
-
-        phone.add(op1);
-        phone.add(op2);
-        phone.add(op3);
-        phone.add(np1);
-        phone.add(np2);
-        phone.add(np3);
-    }
-
 
     public static void main(String[] args) {
+        // ===== TEST OLD PHONE =====
+        OldPhone testOld1 = new OldPhone(
+                "DTC100",
+                "TEST OLD 1",
+                5000000,
+                3,
+                "TEST",
+                50,
+                "Pin trung bình"
+        );
+
+        OldPhone testOld2 = new OldPhone(
+                "DTC101",
+                "TEST OLD 2",
+                8000000,
+                6,
+                "TEST",
+                75,
+                "Pin tốt"
+        );
+
+        oldPhones.add(testOld1);
+        oldPhones.add(testOld2);
+
+        phone.add(testOld1);
+        phone.add(testOld2);
+
+// ===== TEST NEW PHONE =====
+        NewPhone testNew1 = new NewPhone(
+                "DTM100",
+                "TEST NEW 1",
+                10000000,
+                12,
+                "TEST",
+                2
+        );
+
+        NewPhone testNew2 = new NewPhone(
+                "DTM101",
+                "TEST NEW 2",
+                15000000,
+                12,
+                "TEST",
+                3
+        );
+
+        NewPhone testNew3 = new NewPhone(
+                "DTM102",
+                "TEST NEW 3",
+                7000000,
+                6,
+                "TEST",
+                5
+        );
+
+        newPhones.add(testNew1);
+        newPhones.add(testNew2);
+        newPhones.add(testNew3);
+
+        phone.add(testNew1);
+        phone.add(testNew2);
+        phone.add(testNew3);
+
         int choose;
 
         while (true) {
@@ -129,6 +113,12 @@ public class DTManager {
                     case 6:
                         menuSearch();
                         break;
+                    case 7:
+                        totalMoney();
+                        break;
+                    case 8:
+                        discountOldPhone();
+                        break;
                     case 9:
                         return;
                     default:
@@ -137,6 +127,32 @@ public class DTManager {
 
             } while (choose < 1 || choose > 5);
         }
+    }
+
+    private static void discountOldPhone() {
+        System.out.print("Nhập % giảm giá cho điện thoại cũ: ");
+        double percent = Double.parseDouble(scanner.nextLine());
+
+        boolean found = false;
+
+        for (Phone p : phone) {
+            if (p instanceof KhuyenMai) {
+                System.out.println("Giá cũ: " + p.getPrice());
+                ((KhuyenMai) p).khuyenMai(percent);
+                System.out.println("Giá mới: " + p.getPrice());
+            }
+        }
+
+    }
+
+    private static void totalMoney() {
+        double total = 0;
+
+        for (Phone p : phone) {
+            total += p.totalPrice();
+        }
+
+        System.out.printf("Tổng tiền tất cả điện thoại: %,.0f VND%n", total);
     }
 
     private static void menuShowList() {
@@ -207,6 +223,7 @@ public class DTManager {
                     case 1:
                         OldPhone oldPhone = new OldPhone();
                         oldPhone.input();
+
                         oldPhone.setId(getIdOldPhone());
                         oldPhones.add(oldPhone);
                         phone.add(oldPhone);
