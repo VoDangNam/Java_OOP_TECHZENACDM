@@ -8,6 +8,7 @@ public class StudentManage {
         Student s4 = new Student("SV04", "Nam", 8.5);
         Student s5 = new Student("SV05", "An", 7.0);
         Student s6 = new Student("SV06", "Bình", 9.0);
-        System.out.println("So luong sinh vien: "+Student.getStudentCount());
+        System.out.println("So luong sinh vien: " + Student.getStudentCount());
+
     }
 }
