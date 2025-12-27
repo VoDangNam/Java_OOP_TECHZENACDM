@@ -1,7 +1,6 @@
-package lession6_Linkeds.practice;
+package lession6_MyArrayList.practice;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainMARL {
     public static void main(String[] args) {

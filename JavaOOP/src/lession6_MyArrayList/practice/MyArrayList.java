@@ -1,4 +1,4 @@
-package lession6_Linkeds.practice;
+package lession6_MyArrayList.practice;
 
 public class MyArrayList {
     private int capacity;
