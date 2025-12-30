@@ -1,8 +1,8 @@
-package lession07_Linked.practice;
+package lession08_Genertic.practice;
 
 public class Main {
     public static void main(String[] args) {
-        MyLinkedList myLinkedList = new MyLinkedList();
+       /* MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.addFirst(10);
         myLinkedList.addFirst(20);
         myLinkedList.addFirst(30);
@@ -27,7 +27,18 @@ public class Main {
         System.out.println("Set 3 at 3: " + myLinkedList.set(3, 3));
         System.out.println(myLinkedList);
         System.out.println(" element xuat hien dau tien o vi tri: " + myLinkedList.indexOf(3));
-        System.out.println("element xuat hien cuoi cung o vi tri: " + myLinkedList.lastIndexOf(20));
+        System.out.println("element xuat hien cuoi cung o vi tri: " + myLinkedList.lastIndexOf(20));*/
+        MyLinkedList<String> myLinkedListString = new MyLinkedList<>();
+        myLinkedListString.addFirst("10");
+        myLinkedListString.addFirst("Nam");
+        myLinkedListString.addFirst("30");
+        System.out.println(myLinkedListString);
+        System.out.println("Get first: " + myLinkedListString.getFirst());
 
+        MyLinkedList<Double> myLinkedListDouble = new MyLinkedList<>();
+        myLinkedListDouble.addFirst(9.1);
+        myLinkedListDouble.addFirst(10.0);
+        myLinkedListDouble.addFirst(12.391);
+        System.out.println(myLinkedListDouble);
     }
 }
