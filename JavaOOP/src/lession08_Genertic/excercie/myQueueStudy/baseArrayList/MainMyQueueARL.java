@@ -18,7 +18,6 @@ public class MainMyQueueARL {
         System.out.println("size = " + myQueueARL.size());
         System.out.println();
 
-        // 2️⃣ Queue dùng Java
         Queue<String> queue = new ArrayDeque<>(2);
         queue.offer("A");
         queue.offer("B");
