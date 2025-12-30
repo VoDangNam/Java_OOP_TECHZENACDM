@@ -1,6 +1,7 @@
-package lession03_ke_thua.excercises.Bai04;
+package lession04_DaHinh.excercies.Bai04;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class DTManager {
@@ -9,50 +10,86 @@ public class DTManager {
 
     static ArrayList<OldPhone> oldPhones = new ArrayList<>();
     static ArrayList<NewPhone> newPhones = new ArrayList<>();
+    static ArrayList<Phone> phone = new ArrayList<>();
 
     static {
-        // Thêm điện thoại cũ
-        oldPhones.add(new OldPhone(
-                "DTC001",
-                "Iphone 15 Promax",
-                20000000.0,
+
+        // ===== OLD PHONE =====
+        OldPhone op1 = new OldPhone(
+                "OP001",
+                "iPhone 11",
+                6000000.0,
+                3,
+                "Apple",
+                80,
+                "Máy cũ, pin 85%"
+        );
+
+        OldPhone op2 = new OldPhone(
+                "OP002",
+                "iPhone 12",
+                8500000.0,
                 6,
                 "Apple",
-                95,
-                "Đã qua sử dụng, tình trạng tốt"
-        ));
+                90,
+                "Ngoại hình đẹp, full box"
+        );
 
-        // Thêm điện thoại cũ
-        oldPhones.add(new OldPhone(
-                "DTC002",
-                "Iphone 12 Promax",
-                9000000.0,
-                6,
+        OldPhone op3 = new OldPhone(
+                "OP003",
+                "Samsung S20",
+                5500000.0,
+                3,
+                "Samsung",
+                70,
+                "Màn hình xước nhẹ"
+        );
+
+        // ===== NEW PHONE =====
+        NewPhone np1 = new NewPhone(
+                "NP001",
+                "iPhone 15",
+                22000000.0,
+                12,
                 "Apple",
-                75,
-                "Đã qua sử dụng, màn hình nứt nhẹ"
-        ));
+                20
+        );
 
-        // Thêm điện thoại mới
-        newPhones.add(new NewPhone(
-                "DTM001",
-                "Samsung Galaxy S22",
-                11990000.0,
+        NewPhone np2 = new NewPhone(
+                "NP002",
+                "Samsung S23",
+                18000000.0,
                 12,
                 "Samsung",
                 15
-        ));
+        );
 
-        // Thêm điện thoại mới
-        newPhones.add(new NewPhone(
-                "DTM002",
-                "Samsung Galaxy A54",
-                10000000.0,
+        NewPhone np3 = new NewPhone(
+                "NP003",
+                "Xiaomi 13",
+                14000000.0,
                 12,
-                "Samsung",
-                10
-        ));
+                "Xiaomi",
+                25
+        );
+
+        // ===== ADD TO LIST =====
+        oldPhones.add(op1);
+        oldPhones.add(op2);
+        oldPhones.add(op3);
+
+        newPhones.add(np1);
+        newPhones.add(np2);
+        newPhones.add(np3);
+
+        phone.add(op1);
+        phone.add(op2);
+        phone.add(op3);
+        phone.add(np1);
+        phone.add(np2);
+        phone.add(np3);
     }
+
 
     public static void main(String[] args) {
         int choose;
@@ -113,23 +150,17 @@ public class DTManager {
                 System.out.println("4. Trở về menu chính");
 
                 System.out.print("Mời bạn lựa chọn: ");
-                // Giả định scanner đã được khai báo ở phạm vi lớp (static)
+
                 choose = Integer.parseInt(scanner.nextLine());
 
                 switch (choose) {
                     case 1:
                         System.out.println("==== Danh sách tất cả điện thoại ====");
                         // Hiển thị danh sách điện thoại cũ
-                        for (int i = 0; i < oldPhones.size(); i++) {
-                            System.out.println("Thông tin điện thoại thứ " + (i + 1));
-                            oldPhones.get(i).output();
-                        }
-
-                        // Hiển thị danh sách điện thoại mới
-                        for (int i = 0; i < newPhones.size(); i++) {
-                            System.out.println("Thông tin điện thoại thứ " +
-                                    (i + 1 + oldPhones.size()));
-                            newPhones.get(i).output();
+                        int index = 0;
+                        for (Phone phone1 : phone) {
+                            phone1.output();
+                            System.out.println("----------------");
                         }
                         break;
 
@@ -178,6 +209,7 @@ public class DTManager {
                         oldPhone.input();
                         oldPhone.setId(getIdOldPhone());
                         oldPhones.add(oldPhone);
+                        phone.add(oldPhone);
                         System.out.println("Thêm mới thành công");
                         break;
                     case 2:
@@ -185,6 +217,7 @@ public class DTManager {
                         newPhone.input();
                         newPhone.setId(getIdNewPhone());
                         newPhones.add(newPhone);
+                        phone.add(newPhone);
                         System.out.println("Thêm mới thành công");
                         break;
                     case 3:
@@ -198,11 +231,11 @@ public class DTManager {
 
     private static String getIdOldPhone() {
         // max id => id + 1
-        if (oldPhones.size() == 0) {
+        if (oldPhones.isEmpty()) {
             return "DTC001";
         }
 
-        int max = Integer.parseInt(oldPhones.get(0).getId().substring(3)); // 1
+        int max = Integer.parseInt(oldPhones.getFirst().getId().substring(3)); // 1
 
         for (int i = 1; i < oldPhones.size(); i++) {
             int id = Integer.parseInt(oldPhones.get(i).getId().substring(3));
@@ -217,11 +250,11 @@ public class DTManager {
 
     private static String getIdNewPhone() {
         // max id => id + 1
-        if (newPhones.size() == 0) {
+        if (newPhones.isEmpty()) {
             return "DTM001";
         }
 
-        int max = Integer.parseInt(newPhones.get(0).getId().substring(3));
+        int max = Integer.parseInt(newPhones.getFirst().getId().substring(3));
 
         for (int i = 1; i < newPhones.size(); i++) {
             int id = Integer.parseInt(newPhones.get(i).getId().substring(3));
@@ -339,10 +372,36 @@ public class DTManager {
 
                 switch (choose) {
                     case 1:
-                        // TODO: Thực hiện ở bài sau
+                        for (int i = 0; i < phone.size() - 1; i++) {
+                            for (int j = 0; j < phone.size() - 1 - i; j++) {
+                                if (phone.get(j).getPrice() > phone.get(j + 1).getPrice()) {
+                                    Phone temp = phone.get(j);
+                                    phone.set(j, phone.get(j + 1));
+                                    phone.set(j + 1, temp);
+                                }
+                            }
+                        }
+                        System.out.println("Danh sách sau khi sắp xếp:");
+                        for (Phone p : phone) {
+                            p.output();
+                            System.out.println("---------------");
+                        }
                         break;
                     case 2:
-                        // TODO: Thực hiện ở bài sau
+                        for (int i = 0; i < phone.size() - 1; i++) {
+                            for (int j = 0; j < phone.size() - 1 - i; j++) {
+                                if (phone.get(j).getPrice() < phone.get(j + 1).getPrice()) {
+                                    Phone temp = phone.get(j);
+                                    phone.set(j, phone.get(j + 1));
+                                    phone.set(j + 1, temp);
+                                }
+                            }
+                        }
+                        System.out.println("Danh sách sau khi sắp xếp:");
+                        for (Phone p : phone) {
+                            p.output();
+                            System.out.println("---------------");
+                        }
                         break;
                     case 3:
                         return;
@@ -408,16 +467,40 @@ public class DTManager {
 
                 switch (choose) {
                     case 1:
-                        // TODO: Thực hiện ở bài sau
-                        System.out.println("Chức năng Tìm kiếm theo giá đang phát triển...");
+                        System.out.print("Nhập giá MIN: ");
+                        double min = Double.parseDouble(scanner.nextLine());
+
+                        System.out.print("Nhập giá MAX: ");
+                        double max = Double.parseDouble(scanner.nextLine());
+
+                        for (Phone p : phone) {
+                            if (p.getPrice() >= min && p.getPrice() <= max) {
+                                p.output();
+                            }
+                        }
                         break;
                     case 2:
-                        // TODO: Thực hiện ở bài sau
-                        System.out.println("Chức năng Tìm kiếm theo tên đang phát triển...");
+                        String findName;
+                        System.out.print("Nhap vao Ten ban can tim: ");
+                        findName = scanner.nextLine();
+                        System.out.println("Cac dien thoai co ten " + findName);
+                        for (Phone value : phone) {
+                            if (value.getName().toLowerCase().contains(findName.toLowerCase())) {
+                                value.output();
+                            }
+                        }
                         break;
                     case 3:
-                        // TODO: Thực hiện ở bài sau
-                        System.out.println("Chức năng Tìm kiếm theo hãng đang phát triển...");
+                        String HangTim;
+                        System.out.print("Nhap vao hang ban can tim: ");
+                        HangTim = scanner.nextLine();
+                        System.out.println("Cac dien thoai co hang " + HangTim);
+                        for (Phone value : phone) {
+                            if (value.getManufacturer().equalsIgnoreCase(HangTim)) {
+                                value.output();
+                            }
+
+                        }
                         break;
                     case 4:
                         // Thoát khỏi hàm và trở về menu trước đó
@@ -445,13 +528,40 @@ public class DTManager {
 
                 switch (choose) {
                     case 1:
-                        // TODO: Thực hiện ở bài sau
+                        System.out.print("Nhập giá MIN: ");
+                        double min = Double.parseDouble(scanner.nextLine());
+
+                        System.out.print("Nhập giá MAX: ");
+                        double max = Double.parseDouble(scanner.nextLine());
+
+                        for (Phone p : phone) {
+                            if (p.getPrice() >= min && p.getPrice() <= max && p instanceof OldPhone) {
+                                p.output();
+                            }
+                        }
                         break;
                     case 2:
-                        // TODO: Thực hiện ở bài sau
+                        String findName;
+                        System.out.print("Nhap vao Ten ban can tim: ");
+                        findName = scanner.nextLine();
+                        System.out.println("Cac dien thoai co ten " + findName);
+                        for (Phone value : phone) {
+                            if (value.getName().toLowerCase().contains(findName.toLowerCase()) && value instanceof OldPhone) {
+                                value.output();
+                            }
+                        }
                         break;
                     case 3:
-                        // TODO: Thực hiện ở bài sau
+                        String HangTim;
+                        System.out.print("Nhap vao hang ban can tim: ");
+                        HangTim = scanner.nextLine();
+                        System.out.println("Cac dien thoai co hang " + HangTim);
+                        for (Phone value : phone) {
+                            if (value.getManufacturer().equalsIgnoreCase(HangTim) && value instanceof OldPhone) {
+                                value.output();
+                            }
+
+                        }
                         break;
                     case 4:
                         return;
@@ -477,13 +587,40 @@ public class DTManager {
 
                 switch (choose) {
                     case 1:
-                        // TODO: Thực hiện ở bài sau
+                        System.out.print("Nhập giá MIN: ");
+                        double min = Double.parseDouble(scanner.nextLine());
+
+                        System.out.print("Nhập giá MAX: ");
+                        double max = Double.parseDouble(scanner.nextLine());
+
+                        for (Phone p : phone) {
+                            if (p.getPrice() >= min && p.getPrice() <= max && p instanceof NewPhone) {
+                                p.output();
+                            }
+                        }
                         break;
                     case 2:
-                        // TODO: Thực hiện ở bài sau
+                        String findName;
+                        System.out.print("Nhap vao Ten ban can tim: ");
+                        findName = scanner.nextLine();
+                        System.out.println("Cac dien thoai co ten " + findName);
+                        for (Phone value : phone) {
+                            if (value.getName().toLowerCase().contains(findName.toLowerCase()) && value instanceof NewPhone) {
+                                value.output();
+                            }
+                        }
                         break;
                     case 3:
-                        // TODO: Thực hiện ở bài sau
+                        String HangTim;
+                        System.out.print("Nhap vao hang ban can tim: ");
+                        HangTim = scanner.nextLine();
+                        System.out.println("Cac dien thoai co hang " + HangTim);
+                        for (Phone value : phone) {
+                            if (value.getManufacturer().equalsIgnoreCase(HangTim) && value instanceof NewPhone) {
+                                value.output();
+                            }
+
+                        }
                         break;
                     case 4:
                         return;
@@ -495,3 +632,6 @@ public class DTManager {
         }
     }
 }
+
+
+//Gia DTC = %PIN * GIA /100
