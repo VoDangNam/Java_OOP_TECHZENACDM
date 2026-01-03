@@ -12,15 +12,18 @@ public class Main {
         strings.push("Nam2");
         strings.push("Nam3");
 
+        int a=5;
+        int b=5;
+
         while (!strings.isEmpty()) {
             System.out.println(strings.pop());
         }
 
         Scanner sc = new Scanner(System.in);
+
         Stack<Integer> integers = new Stack<>();
         System.out.print("Nhap vao so can chuyen sang he nhi phan: ");
         int n = Integer.parseInt(sc.nextLine());
-        int temp;
         while (n != 0) {
             integers.push(n % 2);
             n /= 2;
