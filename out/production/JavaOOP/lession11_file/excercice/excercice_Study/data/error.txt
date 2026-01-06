@@ -1,0 +1,6 @@
+Dòng 2: Sai định dạng dữ liệu DTC
+Dòng 3: Sai định dạng dữ liệu DTC
+Dòng 4: Trường dữ liệu không được trống, Sai định dạng dữ liệu DTM
+Dòng 5: Trường dữ liệu không được trống, Sai định dạng dữ liệu DTM
+Dòng 6: Trường dữ liệu không được trống, Sai định dạng dữ liệu DTM
+Dòng 7: Trường dữ liệu không được trống, Sai định dạng dữ liệu DTM
